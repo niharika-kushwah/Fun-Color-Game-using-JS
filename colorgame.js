@@ -97,6 +97,10 @@ function setUpModeButtons(){
      });
 
 }
+function exit(){
+      var random=Math.floor(Math.random()*numSquares);
+      return colors[random];	
+}
 function setUpSquares(){
   for(var i=0; i < squares.length; i++){
     //initialize color

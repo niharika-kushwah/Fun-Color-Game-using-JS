@@ -8,6 +8,8 @@ var messageDisplay = document.getElementById("displayresult");
 var resetButton = document.getElementById("reset");
 var h1 = document.querySelector("h1");
 var modebuttons = document.querySelectorAll(".mode");
+var colours = document.querySelectorAll(".mode");
+
 
 init();
 
@@ -115,7 +117,19 @@ function setUpSquares(){
         else{
         this.style.background="#232323";
         messageDisplay.textContent="Try again";
-        }    
+        }  
+	if(clickedcolor === pickedColor)
+        {
+        messageDisplay.textContent="correct!!";
+        changeColor(clickedcolor);
+        h1.style.background = clickedcolor;
+        resetButton.innerHTML = "Play Again?";     
+        }
+        else{
+        this.style.background="#272323";
+        messageDisplay.textContent="Try again";
+        }  
+	     
       })
 
     }
